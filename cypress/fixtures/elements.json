@@ -1,0 +1,17 @@
+{
+  "elements": {
+    "searchpage": {
+      "whatField": "#keyword",
+      "whereField": "#location",
+      "button": ".nhsuk-button"
+    },
+
+    "resultspage":{
+      "sortBy": "#sort",
+      "newestDate": "#sort > option:nth-child(3)",
+      "jobTitle": "#job-title-1",
+      "jobCard": "[data-test='search-result']"
+
+    }
+  }
+}
