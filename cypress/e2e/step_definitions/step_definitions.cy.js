@@ -30,3 +30,25 @@ Then(/^I should get a list of jobs which matches my preferences "([^"]*)"$/, (Te
 Then(/^sort my search results with the "([^"]*)"$/, (text) => {
 		cy.sortOptions(text)
 });
+
+
+When(/^I click on the "([^"]*)"$/, (text) => {
+        cy.clickAnyLinkWithText(text)
+});
+
+
+Then(/^All fields should be empty$/, () => {
+	cy.get("#keyword").should('be.empty')
+    cy.get('#location').should('be.empty')
+    cy.clickAnyLinkWithText('More search options')
+    cy.get('#jobReference').should('be.empty')
+    cy.get('#employer').should('be.empty')
+    cy.get('#payRange').contains('Please select')
+    cy.log('All fields are empty')
+});
+
+
+Then(/^User sees all available jobs$/, () => {
+	cy.get('#search-results-heading').contains(' jobs found')
+    cy.log('Jobs available')
+});
