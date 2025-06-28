@@ -34,3 +34,7 @@ Cypress.Commands.add('sortOptions', (text)=>{
  cy.get(resultspage.sortBy).select(text)
  cy.log(" Search test passed")
 })
+
+Cypress.Commands.add('clickAnyLinkWithText', (text)=>{
+cy.get('a').contains(text).click()
+})

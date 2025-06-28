@@ -3,7 +3,11 @@
     "searchpage": {
       "whatField": "#keyword",
       "whereField": "#location",
-      "button": ".nhsuk-button"
+      "button": ".nhsuk-button",
+      "searhMoreOptions": "#searchOptionsBtn",
+      "jobReference": "#jobReference",
+      "employer": "#employer",
+      "payRange": "#payRange"
     },
 
     "resultspage":{
