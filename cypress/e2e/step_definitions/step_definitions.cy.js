@@ -1,7 +1,8 @@
 
 import { Given, When, Then} from '@badeball/cypress-cucumber-preprocessor';
 
-
+let resultspage;
+let jobCardDate
 
 Given(/^I am a jobseeker on NHS Jobs website$/, () => {
 	cy.visit('/')
@@ -52,3 +53,10 @@ Then(/^User sees all available jobs$/, () => {
 	cy.get('#search-results-heading').contains(' jobs found')
     cy.log('Jobs available')
 });
+
+
+  
+Then(/^the result displayed are sorted correctly by Date Posted$/, () => {
+	cy.verifySortedByRecentDate('ul > li:nth-child(1) > div:nth-child(3) > div:nth-child(1) > ul > li:nth-child(2) > strong');
+});
+

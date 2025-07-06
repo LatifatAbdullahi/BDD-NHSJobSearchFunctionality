@@ -14,7 +14,8 @@
       "sortBy": "#sort",
       "newestDate": "#sort > option:nth-child(3)",
       "jobTitle": "#job-title-1",
-      "jobCard": "[data-test='search-result']"
+      "jobCard": "[data-test='search-result']",
+      "jobCardDate": "#maincontent > div:nth-child(2) > div.nhsuk-grid-column-two-thirds > ul > li:nth-child(1) > div:nth-child(3) > div:nth-child(1) > ul > li:nth-child(2) > strong"
 
     }
   }
