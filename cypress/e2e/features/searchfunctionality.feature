@@ -1,6 +1,7 @@
 
 Feature: Verifying the Search functionality on the NHS webiste
 
+
     Scenario: Users should be able to search for jobs successfully
         Given I am a jobseeker on NHS Jobs website
         When I type my references "Test" into  "#keyword"
@@ -8,6 +9,7 @@ Feature: Verifying the Search functionality on the NHS webiste
         When I click on the "Search" button
         Then I should get a list of jobs which matches my preferences "Test"
         And sort my search results with the "Date Posted (newest)"
+        Then the result displayed are sorted correctly by Date Posted
 
     Scenario: Job search successfully using More search Options without Job reference and pay range
         Given I am a jobseeker on NHS Jobs website
@@ -18,6 +20,7 @@ Feature: Verifying the Search functionality on the NHS webiste
         When I click on the "Search" button
         Then I should get a list of jobs which matches my preferences "Test"
         And sort my search results with the "Date Posted (newest)"
+        Then the result displayed are sorted correctly by Date Posted
 
     Scenario: Job search successfully using only the "what" field
         Given I am a jobseeker on NHS Jobs website
@@ -28,6 +31,7 @@ Feature: Verifying the Search functionality on the NHS webiste
         When I click on the "Search" button
         Then I should get a list of jobs which matches my preferences "Test"
         And sort my search results with the "Date Posted (newest)"
+        Then the result displayed are sorted correctly by Date Posted
 
     Scenario: Users should be able to clear out filters
         Given I am a jobseeker on NHS Jobs website
