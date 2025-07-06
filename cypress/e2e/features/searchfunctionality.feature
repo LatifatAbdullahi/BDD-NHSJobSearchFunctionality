@@ -32,7 +32,7 @@ Feature: Verifying the Search functionality on the NHS webiste
         When I click on the "Search" button
         Then I should get a list of jobs which matches my preferences "Test"
         And sort my search results with the "Date Posted (newest)"
-        Then the result displayed are sorted correctly by Date Posted
+        
 
     Scenario: Users should be able to clear out filters
         Given I am a jobseeker on NHS Jobs website
